@@ -35,13 +35,62 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-12">
-          Get In Touch
+        <h2 className="section-heading text-center text-gray-900 dark:text-white mb-6">
+          Contact Us
+            <hr className="my-4 text-gray-900 font-thin dark:text-gray-600 w-32 mx-auto"></hr>
+            <p className="section-subheading font-extralight tracking-wide text-gray-500 dark:text-gray-400 mb-8 max-w-3xl mt-8 mx-auto">
+              Contact us to discuss your next project.
+              </p>
         </h2>
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 text-center">
-            Have a project in mind or want to collaborate? Feel free to reach out!
-          </p>
+      
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border-2 border-teal-400 dark:border-teal-400">
+          <div className=" mb-12">
+          <h3 className="text-2xl font-medium text-gray-900 dark:text-white mb-4">
+            INBLOCK DESIGN
+          </h3>
+          <div className="flex items-center gap-3 mb-2">
+            <svg
+              className="w-5 h-5 text-gray-600 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <p className="card-text text-gray-600 dark:text-gray-400">
+              Brisbane, AU
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg
+              className="w-5 h-5 text-gray-600 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            <p className="card-text text-gray-600 dark:text-gray-400">
+              inblockdesign@outlook.com
+            </p>
+          </div>
+        </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
@@ -100,7 +149,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-text w-full px-8 py-3 border-2 border-teal-400 text-gray-800 dark:text-white rounded hover:bg-teal-400 hover:text-white dark:hover:text-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>

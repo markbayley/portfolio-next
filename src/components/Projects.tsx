@@ -1,96 +1,57 @@
 import Image from "next/image";
+import Link from "next/link";
+import { projectsData } from "@/data/projectsData";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with cart, checkout, and payment integration.",
-      tags: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-      link: "#",
-      image: "/projectimages/shopping.png",
-    },
-    {
-      title: "Dashboard Analytics",
-      description: "Comprehensive analytics dashboard with real-time data visualization and insights.",
-      tags: ["React", "Node.js", "MongoDB", "Charts.js"],
-      link: "#",
-      image: "/projectimages/dashboard.png",
-    },
-    {
-      title: "Airbnb Clone",
-      description: "Full-stack accommodation booking platform with advanced search and filters.",
-      tags: ["React", "Express", "PostgreSQL"],
-      link: "#",
-      image: "/projectimages/airbnbratio.png",
-    },
-    {
-      title: "Let's Social Platform",
-      description: "Social networking application with real-time messaging and content sharing.",
-      tags: ["Next.js", "Socket.io", "Redis"],
-      link: "#",
-      image: "/projectimages/letssratio.png",
-    },
-    {
-      title: "Tern Application",
-      description: "Modern web application with sleek UI and seamless user experience.",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      link: "#",
-      image: "/projectimages/ternratio.png",
-    },
-    {
-      title: "Anime Gallery",
-      description: "Interactive anime gallery with search, filters, and detailed character information.",
-      tags: ["Next.js", "API Integration", "Tailwind CSS"],
-      link: "#",
-      image: "/projectimages/animegirl.png",
-    },
-  ];
+  const projects = projectsData;
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-12">
-          My Projects
+        <h2 className="section-heading font-medium text-gray-900 dark:text-white mb-12">
+          Portfolio
+           <hr className="my-4 text-gray-900 dark:text-gray-600 w-32"></hr>
+            <p className="section-subheading text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mt-8">Click on any of the images below to view examples of our work.</p>
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
           {projects.map((project, index) => (
-            <div
+            <Link
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+              href={`/project/${project.slug}`}
+              className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
             >
               <div className="relative h-48 w-full">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="card-heading text-gray-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="card-text tracking-wider text-gray-600 dark:text-gray-400 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm"
+                      className="px-3 py-1 border-2 dark:border-2 border-teal-400 dark:border-teal-400 text-gray-800 dark:text-gray-200 rounded-full text-sm"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  className="inline-block text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
-                >
-                  View Project →
-                </a>
+                <span className="inline-block text-amber-400 dark:text-amber-400 hover:underline font-medium">
+                  View Details →
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

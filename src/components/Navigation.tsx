@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,9 @@ export default function Navigation() {
   const navItems = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
+    { name: "Portfolio", href: "#portfolio" },
     { name: "Skills", href: "#skills" },
+    // { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -25,22 +27,23 @@ export default function Navigation() {
               alt="Portfolio Logo"
               width={180}
               height={60}
-              className="h-16 w-auto"
+              className="h-19 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="menu-link tracking-wider text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 {item.name}
               </a>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -80,12 +83,15 @@ export default function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="menu-link block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </a>
             ))}
+            <div className="pt-2">
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </div>

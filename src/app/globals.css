@@ -1,30 +1,67 @@
+
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600";
+@import "https://fonts.googleapis.com/css?family=Poppins:100,200,400,500,600,700,800";
+@import "https://fonts.googleapis.com/css?family=Nunito:100,200,300,400,600,700,800";
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@variant dark (&:is(.dark *));
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Typography Styles */
+.menu-link,
+.btn-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-stretch: condensed;
+}
+
+.hero-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  /* font-weight: 500; */
+}
+
+.section-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+
+}
+
+.section-subheading {
+  font-family: 'Nunito', sans-serif;
+  font-size: 19px;
+  text-transform: none;
+}
+
+.card-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  /* font-weight: 600; */
+}
+
+.card-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }

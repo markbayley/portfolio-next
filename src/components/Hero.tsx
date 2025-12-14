@@ -3,29 +3,29 @@ export default function Hero() {
     <section id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Hi, I&apos;m{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Marko
+          <h1 className="hero-heading text-gray-900 dark:text-white">
+            <span className="bg-gradient-to-r from-amber-300 via-teal-400 to-teal-600 bg-clip-text text-transparent">
+              INBLOCK
             </span>
+           
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Full Stack Developer | Designer | Problem Solver
+           <p className="hero-subheading font-semibold text-gray-800 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            AI Integration | Web3 | UX Design
           </p>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-            I create beautiful, functional, and user-friendly web applications.
-            Passionate about clean code and innovative solutions.
+          <p className="hero-subheading text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+            Professional UX design and web development. We create modern, responsive applications
+            with clean code and custom features tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#projects"
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              href="#portfolio"
+               className="btn-text px-8 py-3 border-2 border-amber-400 dark:border-amber-400 text-gray-800 dark:text-white rounded-md hover:bg-amber-400 hover:text-white dark:hover:bg-amber-400 dark:hover:text-gray-800 transition-colors font-medium"
             >
-              View My Work
+              View Portfolio
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-lg hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors font-medium"
+              className="btn-text px-8 py-3 border-2 border-teal-400 dark:border-teal-400 text-gray-800 dark:text-white rounded-md hover:bg-teal-400 hover:text-white dark:hover:bg-teal-400 dark:hover:text-gray-800 transition-colors font-medium"
             >
               Get In Touch
             </a>
