@@ -4,9 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "./ThemeProvider";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
 
   const navItems = [
     { name: "Home", href: "#hero" },
@@ -23,7 +25,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/logoimages/inblocklogolight.png"
+              src={theme === "dark" ? "/logoimages/inblocklogolight.png" : "/logoimages/inblocklogo.png"}
               alt="Portfolio Logo"
               width={180}
               height={60}
@@ -38,7 +40,7 @@ export default function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
-                className="menu-link tracking-wider text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="menu-link tracking-wider text-gray-800 dark:text-gray-300 hover:text-amber-400 dark:hover:text-teal-400 transition-colors"
               >
                 {item.name}
               </a>

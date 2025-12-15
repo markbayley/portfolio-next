@@ -121,10 +121,10 @@ export default function Skills() {
                       />
                     </div>
                   </div>
-                  <h3 className="mt-4 text-sm md:text-base font-medium text-gray-700 dark:text-gray-300 text-center">
+                  <h3 className="mt-4 text-sm md:text-base font-medium tracking-wide text-gray-700 dark:text-gray-300 text-center">
                     {skill.name}
                   </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center max-w-[200px]">
+                  <p className="text-sm tracking-wide text-gray-500 dark:text-gray-400 mt-1 text-center max-w-[200px]">
                     {skill.name === "HTML5" && "We use modern HTML5 code to build the structure of our websites for browser compatibility."}
                     {skill.name === "NODE JS" && "We are proficient in the popular Node.js framework to integrate backend functionality to your site."}
                     {skill.name === "CSS3" && "The latest version of Cascading Style Sheets, CSS3, is used to style your website for visual appeal."}

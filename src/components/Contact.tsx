@@ -149,7 +149,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="btn-text w-full px-8 py-3 border-2 border-teal-400 text-gray-800 dark:text-white rounded hover:bg-teal-400 hover:text-white dark:hover:text-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-text w-full cursor-pointer px-8 py-3 border-2 border-teal-400 text-gray-800 dark:text-white rounded hover:bg-teal-400 hover:text-white dark:hover:text-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>
