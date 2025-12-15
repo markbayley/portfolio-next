@@ -40,7 +40,7 @@ export default function Projects() {
                 : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
             }`}
           >
-            Apps
+            Websites
           </button>
           <button
             onClick={() => setActiveTab("ux")}
@@ -50,7 +50,7 @@ export default function Projects() {
                 : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
             }`}
           >
-            UX Projects
+            Apps
           </button>
           <button
             onClick={() => setActiveTab("games")}
@@ -66,12 +66,12 @@ export default function Projects() {
       
         {/* Apps Tab */}
         {activeTab === "apps" && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Link
                 key={index}
                 href={`/project/${project.slug}?from=apps`}
-                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
               >
                 <div className="relative h-48 w-full">
                   <Image
@@ -115,7 +115,7 @@ export default function Projects() {
               <Link
                 key={index}
                 href={`/project/${project.slug}?from=ux`}
-                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
               >
                 <div className="relative h-48 w-full">
                   <Image
@@ -159,7 +159,7 @@ export default function Projects() {
               <Link
                 key={index}
                 href={`/project/${project.slug}?from=games`}
-                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer block"
               >
                 <div className="relative w-full aspect-video bg-black">
                   <video

@@ -43,7 +43,7 @@ export default function Contact() {
               </p>
         </h2>
       
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border-2 border-teal-400 dark:border-teal-400">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 border-2 border-teal-400 dark:border-teal-400">
           <div className=" mb-12">
           <h3 className="text-2xl font-medium text-gray-900 dark:text-white mb-4">
             INBLOCK DESIGN
@@ -149,7 +149,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="btn-text w-full cursor-pointer px-8 py-3 border-2 border-teal-400 text-gray-800 dark:text-white rounded hover:bg-teal-400 hover:text-white dark:hover:text-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-text w-full cursor-pointer px-8 py-3 border-2 border-teal-400 text-gray-800 dark:text-white rounded-lg hover:bg-teal-400 hover:text-white dark:hover:text-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>

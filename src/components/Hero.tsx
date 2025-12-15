@@ -19,13 +19,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#portfolio"
-               className="btn-text px-8 py-3 border-2 border-amber-400 dark:border-amber-400 text-gray-800 dark:text-white rounded-md hover:bg-amber-400 hover:text-white dark:hover:bg-amber-400 dark:hover:text-gray-800 transition-colors font-medium"
+               className="btn-text px-8 py-3 border-2 border-amber-400 dark:border-amber-400 text-gray-800 dark:text-white rounded-lg hover:bg-amber-400 hover:text-white dark:hover:bg-amber-400 dark:hover:text-gray-800 transition-colors font-medium"
             >
               View Portfolio
             </a>
             <a
               href="#contact"
-              className="btn-text px-8 py-3 border-2 border-teal-400 dark:border-teal-400 text-gray-800 dark:text-white rounded-md hover:bg-teal-400 hover:text-white dark:hover:bg-teal-400 dark:hover:text-gray-800 transition-colors font-medium"
+              className="btn-text px-8 py-3 border-2 border-teal-400 dark:border-teal-400 text-gray-800 dark:text-white rounded-lg hover:bg-teal-400 hover:text-white dark:hover:bg-teal-400 dark:hover:text-gray-800 transition-colors font-medium"
             >
               Get In Touch
             </a>
