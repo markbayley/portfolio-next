@@ -84,7 +84,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         </Link>
 
         {/* Project Header */}
-        <h1 className="section-heading text-gray-900 dark:text-white mb-6">
+        <h1 className="text-3xl uppercase text-gray-900 dark:text-white mb-6">
           {project.title}
         </h1>
 

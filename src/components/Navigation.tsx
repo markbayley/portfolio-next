@@ -14,7 +14,7 @@ export default function Navigation() {
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Skills", href: "#skills" },
+    // { name: "Skills", href: "#skills" },
     // { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
   ];

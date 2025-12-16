@@ -15,12 +15,30 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
     
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus(""), 3000);
-    }, 1000);
+    try {
+      const form = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(form);
+      
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus(""), 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus(""), 5000);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus(""), 5000);
+    }
   };
 
   const handleChange = (
@@ -92,6 +110,12 @@ export default function Contact() {
           </div>
         </div>
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Web3Forms Access Key */}
+            <input type="hidden" name="access_key" value="3af8e6f2-6d27-4bba-926c-1cc1dc488c8a" />
+            
+            {/* Honeypot Spam Protection */}
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+            
             <div>
               <label
                 htmlFor="name"
@@ -156,6 +180,11 @@ export default function Contact() {
             {status === "success" && (
               <p className="text-green-600 dark:text-green-400 text-center">
                 Message sent successfully!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600 dark:text-red-400 text-center">
+                Failed to send message. Please try again.
               </p>
             )}
           </form>
