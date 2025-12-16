@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -14,7 +15,9 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Projects />
+        <Suspense fallback={<div className="py-20 text-center">Loading...</div>}>
+          <Projects />
+        </Suspense>
         {/* <Skills /> */}
         {/* <Services /> */}
         <Contact />
